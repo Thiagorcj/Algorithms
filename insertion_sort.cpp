@@ -31,8 +31,9 @@ void print_array(vector<int> arr){
 
 int main() {
   vector<int> arr={5,4,3,2,1};
-  cout << "Array inicial: ";
+  cout << "Array: ";
   print_array(arr);
+  cout << "Ordered array: ";
   vector<int> ordered_array = Insertion_Sort(arr);
   print_array(ordered_array);
 }  
