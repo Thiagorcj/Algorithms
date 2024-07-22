@@ -3,21 +3,15 @@
 using namespace std;
 
 vector<int> Insertion_Sort(vector<int> arr){
-  int aux;
+  int aux, j;
   for(int i=1;i<arr.size();i++){
     aux = arr[i];
-    for(int j=i-1;j>=0;j--){
-      if(arr[j]>=aux){
+    j=i-1;
+    while (aux<arr[j]&&j>=0){
         arr[j+1]=arr[j];
-        if(j==0){
-          arr[j]=aux;
-        }
-      }
-      else if(arr[j]<aux){
-        arr[j+1]=aux;
-        break;
-      }
-}
+        j--;
+  }
+    arr[j+1] = aux;
   }
   return arr;
 }
